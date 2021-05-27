@@ -11,6 +11,7 @@ import './styles/navbar.css';
 import './styles/about.css';
 import './styles/services.css';
 import './styles/login.css';
+import './styles/logged.css';
 
 import './styles/footer.css';
 
