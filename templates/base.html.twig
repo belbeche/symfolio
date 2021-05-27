@@ -31,61 +31,111 @@
 						<span></span>
 					</a>
 				</div>
-				<a href="{{ path('app_login')}}" class="btn btn-primary rounded">Connexion</a>
-				<div class="nav-drop">
-					<ul>
-						<li class="active visible-sm visible-xs">
-							<a href="{{path('index')}}">Accueil</a>
-						</li>
-						<li>
-							<a href="#about">À propos</a>
-						</li>
-						<li>
-							<a href="#services">Mes compétences</a>
-						</li>
-						<li>
-							<a href="#projects">Catalogues</a>
-						</li>
-						<li>
-							<a href="#contacts">Contact</a>
-						</li>
-					</ul>
-					<div class="drop-holder visible-sm visible-xs">
-						<span>Suivez moi</span>
-						<ul class="social-networks">
-							<li>
-								<a href="https://github.com/belbeche">
-									<i class="fab fa-github"></i>
-								</a>
+
+				{% if is_granted('ROLE_USER') %}
+					<a href="{{ path('app_profil')}}" class="btn btn-info rounded">Profile</a>
+				{% elseif is_granted('ROLE_ADMIN') %}
+					<a href="#" class="btn btn-danger rounded">Admin</a>
+				{% else %}
+					<a href="{{ path('app_login')}}" class="btn btn-primary rounded">Espace Membre</a>
+				{% endif %}
+				{% if app.user == false %}
+					<div class="nav-drop">
+						<ul>
+							<li class="active visible-sm visible-xs">
+								<a href="{{path('index')}}">Accueil</a>
 							</li>
 							<li>
-								<a href="https://www.linkedin.com/in/walid-belbeche/">
-									<i class="fab fa-linkedin"></i>
-								</a>
+								<a href="#about">À propos</a>
 							</li>
 							<li>
-								<a href="https://www.facebook.com/waloup.elyana.5/">
-									<i class="fab fa-facebook-square"></i>
-								</a>
+								<a href="#services">Mes compétences</a>
+							</li>
+							<li>
+								<a href="#projects">Catalogues</a>
+							</li>
+							<li>
+								<a href="#contacts">Contact</a>
 							</li>
 						</ul>
+						<div class="drop-holder visible-sm visible-xs">
+							<span>Suivez moi</span>
+							<ul class="social-networks">
+								<li>
+									<a href="https://github.com/belbeche">
+										<i class="fab fa-github"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.linkedin.com/in/walid-belbeche/">
+										<i class="fab fa-linkedin"></i>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.facebook.com/waloup.elyana.5/">
+										<i class="fab fa-facebook-square"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					{% else %}
+						<div class="nav-drop">
+							<ul>
+								<li class="active visible-sm visible-xs">
+									<a href="{{path('index')}}">Accueil</a>
+								</li>
+								<li>
+									<a href="#about">À propos</a>
+								</li>
+								<li>
+									<a href="#services">Mes compétences</a>
+								</li>
+								<li>
+									<a href="#projects">Catalogues</a>
+								</li>
+								<li>
+									<a href="#contacts">Contact</a>
+								</li>
+							</ul>
+							<div class="drop-holder visible-sm visible-xs">
+								<span>Suivez moi</span>
+								<ul class="social-networks">
+									<li>
+										<a href="https://github.com/belbeche">
+											<i class="fab fa-github"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.linkedin.com/in/walid-belbeche/">
+											<i class="fab fa-linkedin"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.facebook.com/waloup.elyana.5/">
+											<i class="fab fa-facebook-square"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						{% endif %}
 					</div>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<body>
-		{% block body %}
-			<div id="wrapper"></div>
-		{% endblock %}
-		<!-- FOOTER -->
+				</nav>
 
-		{% block javascripts %}
-			{{ encore_entry_script_tags('app') }}
-			<script src="http://nversios.com/assets/js/jquery-1.11.2.min.js"></script>
-			<script src="http://nversios.com/assets/js/bootstrap.js"></script>
-			<script src="http://nversios.com/assets/js/jquery.main.js"></script>
-			<script src="https://kit.fontawesome.com/e73a7a7bd1.js" crossorigin="anonymous"></script>
-		{% endblock %}
-	</body>
+			</div>
+		</header>
+		<body>
+			{% block body %}
+				<div id="wrapper"></div>
+			{% endblock %}
+			<!-- FOOTER -->
+
+			{% block javascripts %}
+				{{ encore_entry_script_tags('app') }}
+				<script src="http://nversios.com/assets/js/jquery-1.11.2.min.js"></script>
+				<script src="http://nversios.com/assets/js/bootstrap.js"></script>
+				<script src="http://nversios.com/assets/js/jquery.main.js"></script>
+				<script src="https://kit.fontawesome.com/e73a7a7bd1.js" crossorigin="anonymous"></script>
+			{% endblock %}
+		</body>
+	</html>
 </html>

@@ -39,6 +39,11 @@ class User implements UserInterface
      */
     private $username;
 
+    public function __construct($roles)
+    {
+        $this->roles = $roles;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
