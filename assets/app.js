@@ -9,7 +9,7 @@
 import './styles/app.css';
 import './styles/navbar.css';
 import './styles/about.css';
-import './styles/grid.css';
+import './styles/services.css';
 
 import './styles/footer.css';
 
