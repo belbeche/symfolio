@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello IndexController!
+{% block title %}DreamAPP - Accueil
 {% endblock %}
 
 {% block body %}
@@ -31,7 +31,7 @@
 			</div>
 			<div class="row">
 				<div class="text-box col-md-offset-1 col-md-10">
-					<h2>Depuis 2016</h2>
+					<h2 style="border-left: 5px solid #fc5356;">Depuis 2016</h2>
 					<div class="about-the-author">
 						<h3 class="author-title">A propos</h3>
 						<div class="col-md-2">
@@ -39,7 +39,7 @@
 								<a href="images/profil.jpg"><img src="images/profil.jpg" width="100%" height="100%"></a>
 							</div>
 						</div>
-						<div class="col-md-8">
+						<div class="col-md-10">
 							<br>
 							<h4>Walid BELBECHE</h4>
 							<p>Passionné par la technologie depuis toujours après un parcours professionnel varié, j'ai décidé de rentrer dans le monde dunumérique en devenant développeur web. Mon objectif est de crée des projets techniquement au top avec un design épuré.L'Access Code School m'a apporté beaucoup notamment au niveau de l'autonomie dans le travail.</p>
@@ -55,7 +55,7 @@
 	<!-- /About -->
 
 	<!-- introduction -->
-	<div class="specs" id="specs">
+	<div class="specs" id="services">
 		<section class="area">
 			<div class="container">
 				<div class="row">
@@ -70,8 +70,12 @@
 									<img src="images/graph-04.svg" width="110" alt="">
 								</div>
 								<div class="text-holder">
-									<h3>Créé pour créer un meilleur Web</h3>
-									<p>Étape essentielle du lancement de votre projet web, le brainstorm d’idées et le travail d’ergonomie web vont permettre de poser les bases de votre futur site,seo, mockup sont des mots qui feront bientôt partie de votre vocabulaire !
+									<h3>Un site web fonctionnel et adapté</h3>
+									<p>Tous nos clients ne sont pas des experts, c’est pourquoi nous apportons un soin tout particulier à plus de
+										<strong>transparence dans le process de création de votre site internet
+										</strong>
+										et l’outil final d’administration de ce dernier qui vous sera livré. Les questions sont très nombreuses, créer un site web ce n’est pas une mince affaire et cela engage dans une
+										<strong>démarche de digitalisation de votre entreprise</strong>.
 									</p>
 								</div>
 							</li>
@@ -80,8 +84,11 @@
 									<img class="pull-left" src="images/graph-03.svg" width="90" alt="">
 								</div>
 								<div class="text-holder">
-									<h3>Personnalisation infinie</h3>
-									<p>Des idées, c’est bien. Les mettre en en pratique, c’est encore mieux ! Le webdesign de votre futur site internet est construit sous forme de maquettes (charte graphique) qui vous permettront de cadrer graphiquement et de vous projeter sur votre outil.
+									<h3>Chez DreamSTUDIO
+									</h3>
+									<p>Nous vous livrons un
+										<strong>outil web administrable
+										</strong>, vous appartenant totalement, parfaitement fonctionnel, évolutif, sécurisé et compatible Mobile. Rien que ça ! , nous intervenons auprès de nos clients localisés partout en France.
 									</p>
 								</div>
 							</li>
@@ -91,7 +98,7 @@
 								</div>
 								<div class="text-holder">
 									<h3>Fonctionnalités expérimentales</h3>
-									<p>Là on va commencer à entrer dans le vif du sujet : la transformation des visuels en code HTML, CSS et PHP ! C’est à ce moment que nos équipes techniques de développeurs web vont créer le code de votre nouveau site internet, c’est tout ce qu’il faut retenir !
+									<p>Vous souhaitez aller un peu plus loin et vous avez en tête des fonctionnalités bien précises pour votre nouveau site internet ? Tout est possible techniquement, discutons ensemble de votre développement web sur mesure !
 									</p>
 								</div>
 							</li>
@@ -101,7 +108,7 @@
 								</div>
 								<div class="text-holder">
 									<h3>Outils innovant pour gagner du temps</h3>
-									<p>Une Ferrari sans moteur, c’est beau mais ça n’avance pas ! Pour éviter le syndrome de la coquille vide, il faudra rédiger du contenu . Ne vous inquiétez pas, on a l’habitude et nos rédacteurs seront là si besoin. Pas de panique !
+									<p>Vous êtes une marque souhaitant donner un coup de neuf à son site web ou une entreprise souhaitant redynamiser sa présence sur le web ? Optez pour une création de site vitrine sur mesure, dynamique et novateur. À votre image.
 									</p>
 								</div>
 							</li>
@@ -109,8 +116,10 @@
 					</div>
 					<div class="col-md-7">
 						<div class="slide-holder">
-							<h2 class="hidden-xs hidden-sm text-primary">&lt;Here is what you get&gt;</h2>
-							<div class="img-slide scroll-trigger"><img src="images/img-01.jpg" height="624" width="1184" alt="php" style="border-radius: 1px;"></div>
+							<h2 class="hidden-xs hidden-sm text-primary">Web App
+								<span class="bg-info">What is it?</span>
+							</h2>
+							{# <div class="img-slide scroll-trigger"><img src="images/img-01.jpg" height="624" width="1184" alt="php" style="border-radius: 1px;"></div> #}
 						</div>
 					</div>
 				</div>
@@ -118,9 +127,9 @@
 		</section>
 	</div>
 	<!-- introduction -->
-	<hr>
+
 	<!-- What i do -->
-	<section class="section services-section" id="services">
+	<section class="section services-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6">
@@ -232,10 +241,24 @@
 	</section>
 	<!-- /News Letter -->
 
-<!-- Debut Catalogue -->
+	<!-- Debut Catalogue -->
 
 
 	<!-- Fin catalogues -->
 
+	<!-- Github Calendar -->
+	<!--<script src="http://nversios.com/assets/js/jquery.js"></script>-->
+	<!-- Include the library. --><script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"> </script>
+
+	<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
+	<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
+
+	<script>
+		GitHubCalendar(".calendar", "wbelbeche.s@gmail.com");
+
+// or enable responsive functionality:
+GitHubCalendar(".calendar", "belbeche", {responsive: true});
+	</script>
+	<!-- /githubcalendar -->
 
 {% endblock %}

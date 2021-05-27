@@ -20,84 +20,72 @@
 			{{ encore_entry_link_tags('app') }}
 		{% endblock %}
 	</head>
-	<body>
-		<div id="wrapper">
-			<header id="header">
-				<div class="container">
-					<div class="logo">
-						<a href="{{ path('index')}}"><img src="images/logo.png" alt="nversios"></a>
-					</div>
-					<nav id="nav">
-						<div class="opener-holder">
-							<a href="#" class="nav-opener">
-								<span></span>
-							</a>
-						</div>
-						<a href="{{ path('index')}}" class="btn btn-primary rounded">Connexion</a>
-						<div class="nav-drop">
-							<ul>
-								<li class="active visible-sm visible-xs">
-									<a href="{{path('index')}}">Accueil</a>
-								</li>
-								<li>
-									<a href="#about">À propos</a>
-								</li>
-								<li>
-									<a href="#specs">Mes compétences</a>
-								</li>
-								<li>
-									<a href="#projects">Catalogues</a>
-								</li>
-								<li>
-									<a href="#contacts">Contact</a>
-								</li>
-							</ul>
-							<div class="drop-holder visible-sm visible-xs">
-								<span>Suivez moi</span>
-								<ul class="social-networks">
-									<li>
-										<a href="https://github.com/belbeche">
-											<i class="fab fa-github"></i>
-										</a>
-									</li>
-									<li>
-										<a href="https://www.linkedin.com/in/walid-belbeche/">
-											<i class="fab fa-linkedin"></i>
-										</a>
-									</li>
-									<li>
-										<a href="https://www.facebook.com/waloup.elyana.5/">
-											<i class="fab fa-facebook-square"></i>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</nav>
+	<header id="header">
+		<div class="container">
+			<div class="logo">
+				<a href="{{ path('index')}}"><img src="images/logo.png" alt="nversios"></a>
+			</div>
+			<nav id="nav">
+				<div class="opener-holder">
+					<a href="#" class="nav-opener">
+						<span></span>
+					</a>
 				</div>
-			</header>
-			{% block body %}{% endblock %}
-			<!-- FOOTER -->
+				<a href="{{ path('app_login')}}" class="btn btn-primary rounded">Connexion</a>
+				<div class="nav-drop">
+					<ul>
+						<li class="active visible-sm visible-xs">
+							<a href="{{path('index')}}">Accueil</a>
+						</li>
+						<li>
+							<a href="#about">À propos</a>
+						</li>
+						<li>
+							<a href="#services">Mes compétences</a>
+						</li>
+						<li>
+							<a href="#projects">Catalogues</a>
+						</li>
+						<li>
+							<a href="#contacts">Contact</a>
+						</li>
+					</ul>
+					<div class="drop-holder visible-sm visible-xs">
+						<span>Suivez moi</span>
+						<ul class="social-networks">
+							<li>
+								<a href="https://github.com/belbeche">
+									<i class="fab fa-github"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.linkedin.com/in/walid-belbeche/">
+									<i class="fab fa-linkedin"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.facebook.com/waloup.elyana.5/">
+									<i class="fab fa-facebook-square"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 		</div>
+	</header>
+	<body>
+		{% block body %}
+			<div id="wrapper"></div>
+		{% endblock %}
+		<!-- FOOTER -->
+
 		{% block javascripts %}
 			{{ encore_entry_script_tags('app') }}
 			<script src="http://nversios.com/assets/js/jquery-1.11.2.min.js"></script>
 			<script src="http://nversios.com/assets/js/bootstrap.js"></script>
 			<script src="http://nversios.com/assets/js/jquery.main.js"></script>
 			<script src="https://kit.fontawesome.com/e73a7a7bd1.js" crossorigin="anonymous"></script>
-			<!--<script src="http://nversios.com/assets/js/jquery.js"></script>-->
-			<!-- Include the library. -->
-			<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
-
-			<!-- Optionally, include the theme (if you don't want to struggle to write the CSS) -->
-			<link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
-
-			<script>
-				GitHubCalendar(".calendar", "wbelbeche.s@gmail.com");
-
-// or enable responsive functionality:
-GitHubCalendar(".calendar", "belbeche", {responsive: true});
-			</script>
 		{% endblock %}
 	</body>
-</html></body></html></html>
+</html>

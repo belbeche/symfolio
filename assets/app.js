@@ -10,6 +10,7 @@ import './styles/app.css';
 import './styles/navbar.css';
 import './styles/about.css';
 import './styles/services.css';
+import './styles/login.css';
 
 import './styles/footer.css';
 
