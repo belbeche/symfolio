@@ -4,35 +4,35 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="theme-color" content="#ffffff">
-		<meta name="description" content="creation site internet pas cher">
-		<meta name="keywords" content="site / application pas cher">
-		<meta name="msapplication-TileColor" content="#603cba">
-		<meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
-		<meta name="msapplication-config" content="favicons/browserconfig.xml">
+		<meta name="description" content="creation site pas cher">
+		<meta name="keywords" content="DreamSTUDIO , site internet , conception">
 		<title>
 			{% block title %}Wee portfolio
 			{% endblock %}
 		</title>
 		{% block stylesheets %}
-			<link rel="stylesheet" href="http://nversios.com/assets/bootstrap.css">
-			<link rel="stylesheet" href="http://nversios.com/assets/all.css">
-			{{ encore_entry_link_tags('app') }}
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+			{{ encore_entry_link_tags('app') }}
 		{% endblock %}
 	</head>
 	<header id="header">
 		<div class="container">
-			<div class="logo">
-				<a href="{{ path('index')}}"><img src="images/logo.png" alt="walid belbeche"></a>
-			</div>
+			{% if app.user == false %}
+				<div class="logo">
+					<a href="{{ path('index')}}"><img src="images/logo.png" alt="dreamSTUDIO"></a>
+				</div>
+			{% else %}
+				<div class="logo">
+					<a href="{{ path('index_logged')}}"><img src="images/logo.png" alt="dreamSTUDIO"></a>
+				</div>
+			{% endif %}
 			<nav id="nav">
 				<div class="opener-holder">
 					<a href="#" class="nav-opener">
 						<span></span>
 					</a>
 				</div>
-
 				{% if is_granted('ROLE_USER') %}
 					<a href="{{ path('app_profil')}}" class="btn btn-info rounded">Profile</a>
 				{% elseif is_granted('ROLE_ADMIN') %}
@@ -89,13 +89,13 @@
 									<a href="#about">Réalisations</a>
 								</li>
 								<li>
-									<a href="#services">Gallery</a>
+									<a href="{{ path('blog')}}">Blog</a>
 								</li>
 								<li>
 									<a href="#projects">Catalogues</a>
 								</li>
 								<li>
-									<a href="#contacts">Contact</a>
+									<a href="{{ path('prise_de_rendez_vous') }}">Rendez-vous</a>
 								</li>
 							</ul>
 							<div class="drop-holder visible-sm visible-xs">
@@ -122,20 +122,12 @@
 					</div>
 				</nav>
 			</div>
-		</header>
-		<body>
-			{% block body %}
-				<div id="wrapper"></div>
-			{% endblock %}
-			<!-- FOOTER -->
-
-			{% block javascripts %}
-				{{ encore_entry_script_tags('app') }}
-				<script src="http://nversios.com/assets/js/jquery-1.11.2.min.js"></script>
-				<script src="http://nversios.com/assets/js/bootstrap.js"></script>
-				<script src="http://nversios.com/assets/js/jquery.main.js"></script>
-				<script src="https://kit.fontawesome.com/e73a7a7bd1.js" crossorigin="anonymous"></script>
-			{% endblock %}
-		</body>
+		</div>
 	</html>
-</html>
+</html></html></header><body>{% block body %}
+<div class="wrapper"></div>{% endblock %}<!-- FOOTER -->{% block javascripts %}
+<script src="http://nversios.com/assets/js/jquery-1.11.2.min.js"></script>
+<script src="http://nversios.com/assets/js/bootstrap.js"></script>
+<script src="http://nversios.com/assets/js/jquery.main.js"></script>
+<script src="https://kit.fontawesome.com/e73a7a7bd1.js" crossorigin="anonymous"></script>
+{{ encore_entry_script_tags('app') }}{% endblock %}</body></html></html>

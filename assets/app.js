@@ -6,14 +6,25 @@
  */
 
 // any CSS you import will output into a single css file (app.css in this case)
+
+// Style page 
+import './styles/all.css';
+// import './styles/lumen.css';
+import './styles/bootstrap.css';
+
+
 import './styles/app.css';
+import './styles/main.css';
+
+// Page Snippet
 import './styles/navbar.css';
 import './styles/about.css';
 import './styles/services.css';
 import './styles/login.css';
 import './styles/logged.css';
-
+import './styles/nos_service.css';
 import './styles/footer.css';
+
 
 // start the Stimulus application
 import './bootstrap';

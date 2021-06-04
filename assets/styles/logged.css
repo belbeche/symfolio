@@ -1,23 +1,10 @@
-.h7 {
-    font-size: 0.8rem;
-}
-
-.gedf-wrapper {
-    margin-top: 0.97rem;
-}
-
-@media (min-width: 992px) {
-    .gedf-main {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-    .gedf-card {
-        margin-bottom: 2.77rem;
-    }
-}
-
-/**Reset Bootstrap*/
-.dropdown-toggle::after {
-    content: none;
-    display: none;
-}
+.navbar{margin-bottom:0;}
+section{width:100%; float:left;}
+.banner-section{background-image:url("https://images.unsplash.com/photo-1461773518188-b3e86f98242f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80"); background-size:cover; height: 380px; left: 0;  top: 0; background-position:0;}
+.post-title-block{padding:100px 0;}
+.post-title-block h1 {color: #fff; font-size: 85px; font-weight: bold; text-transform: capitalize;}
+.post-title-block li{font-size:20px; color: #fff;}
+.image-block{ width:100%;}
+.footer-link{float:left; width:100%; background:#222222; text-align:center; padding:30px;}
+.footer-link a{color:#A9FD00; font-size:18px; text-transform:uppercase;}
+.banner-text{position:absolute;z-index: 99;top:50px;left: 50px;}

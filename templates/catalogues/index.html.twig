@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CataloguesController!
+{% endblock %}
+
+{% block body %}
+	{% extends 'base.html.twig' %}
+
+	{% block title %}Calendrier de rendez-vous
+	{% endblock %}
+
+	{% block body %}
+
+
+		<div id="calendrier"></div>
+
+		{% block javascript %}
+			<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.7.2/main.min.js" integrity="sha256-yirUYbNvdsLHfZcQDyDMB51pfQ0Mn8siGDZOvtBgCFw=" crossorigin="anonymous"></script>
+
+			<script>
+
+				window.onload = () => {
+let calendarElt = document.querySelector("#calendrier");
+
+let calendar = new FullCalendar.Calendar(calendarElt, {
+initialView: 'timeGridWeek',
+local: 'fr',
+timeZone: 'Europe/Paris',
+headerToolbar: {
+start: 'prev,next today',
+center: 'title',
+end: 'dayGridMonth,timeGridWeek'
+}
+});
+
+calendar.render();
+}
+			</script>
+		{% endblock %}
+
+	{% endblock %}
+
+{% endblock %}
