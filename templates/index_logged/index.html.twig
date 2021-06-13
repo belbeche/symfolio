@@ -5,28 +5,39 @@
 
 {% block body %}
 
-	<div class="container-fluide'">
-		<div class="banner-section"></div>
-		<div class="container">
-			<div class="services">
-				Nos Services
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="banner-section"></div>
+				<span class="dotProfile"><img src="images/profil.jpg" alt="profile" width="100%" height="100%" style="border-radius: 50%;"></span>
 			</div>
-			<div class="row">
-				<div class="col-md-6">
-					<a href="{{ path('prise_de_rendez_vous')}}">
-						<h2>Prise de rendez-vous</h2>
-					</a>
-				</div>
-				<div class="col-md-6">
-					<h2>Découvrir notre catalogues</h2>
-				</div>
-				<div class="col-md-6">
-					<h2>Echanger en toute transparence</h2>
-				</div>
-				<div class="col-md-6">
-					<h2>Devis</h2>
-				</div>
+			<div class="col-md-4">
+				<ul class="pricing-table">
+					<li class="title">Basique</li>
+					<li class="price">$100 000</li>
+					<li class="description">Stagiaire ACS</li>
+					<li>1450 Inscrit</li>
+					<li>1 bilion de vue par jour !</li>
+					<li>
+						<a class="button" href="#">Donate now</a>
+					</li>
+				</ul>
 			</div>
 		</div>
+	</div>
 
-	{% endblock %}
+
+	{# <div class="container">
+								<div class="row">
+									<div class="col-md-6"></div>
+									<div class="col-md-6">
+										<div class="optionsProfile"></div>
+									</div>
+								</div>
+							</div> #}
+
+
+	<div class="col-md-2 services"></div>
+
+	{% block javascripts%}{% endblock %}
+{% endblock %}

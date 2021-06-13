@@ -1,6 +1,6 @@
 .navbar{margin-bottom:0;}
 section{width:100%; float:left;}
-.banner-section{background-image:url("https://images.unsplash.com/photo-1461773518188-b3e86f98242f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80"); background-size:cover; height: 380px; left: 0;  top: 0; background-position:0;}
+.banner-section{background-image:url("https://images.unsplash.com/photo-1461773518188-b3e86f98242f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80"); background-size:cover; height: 150px; left: 0;  top: 0; background-position:0;box-shadow: 0 0 19px 3px rgb(0 0 0 / 12%);}
 .post-title-block{padding:100px 0;}
 .post-title-block h1 {color: #fff; font-size: 85px; font-weight: bold; text-transform: capitalize;}
 .post-title-block li{font-size:20px; color: #fff;}

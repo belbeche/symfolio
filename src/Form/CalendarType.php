@@ -15,6 +15,7 @@ class CalendarType extends AbstractType
     {
         $builder
             ->add('title')
+            // je change les proriétée de chaque element
             ->add('start', DateTimeType::class, [
                 'date_widget' => 'single_text'
             ])

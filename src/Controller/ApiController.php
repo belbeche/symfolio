@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use DateTimeInterface;
 use App\Entity\Calendar;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -50,13 +51,24 @@ class ApiController extends AbstractController
                 $code = 201;
                 // On hydrate l'objet avec les données
                 $calendar->setTitle($donnees->setTitle());
-                $calendar->setStart($donnees->setStart());
-                if($donnees->allDay)
                 $calendar->setDescription($donnees->setDescription());
+                $calendar->setStart(new DateTimeInterface($donnees->setStart()));
+                if ($donnees->allDay) {
+                    $calendar->setEnd(new DateTimeInterface($donnees->setStart()));
+                } else {
+                    $calendar->setEnd(new DateTimeInterface($donnees->setEnd()));
+                }
+                $calendar->setAllDay($donnees->setAllDay());
                 $calendar->setBackgroundColor($donnees->setBackgroundColor());
                 $calendar->setBorderColor($donnees->setBorderColor());
                 $calendar->setTextColor($donnees->setTextColor());
             }
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($calendar);
+            $em->flush();
+
+            // On retourne un code
+            return new Response('Ok', $code);
         } else {
             // les données sont incomplète
             return new Response('Donées incomplètes', 404);

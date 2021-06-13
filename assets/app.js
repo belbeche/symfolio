@@ -8,6 +8,7 @@
 // any CSS you import will output into a single css file (app.css in this case)
 
 // Style page 
+import './styles/foundation.css';
 import './styles/all.css';
 // import './styles/lumen.css';
 import './styles/bootstrap.css';
@@ -15,6 +16,8 @@ import './styles/bootstrap.css';
 
 import './styles/app.css';
 import './styles/main.css';
+import './styles/interface_user.css';
+// import './styles/profile.scss';
 
 // Page Snippet
 import './styles/navbar.css';
